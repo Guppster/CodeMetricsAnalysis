@@ -13,10 +13,9 @@ subtitle: ""
 subsubtitle: ""
 
 runhead: "Project Proposal"
-author:
-- name: Gurpreet Singh
-  studentnumber: 250674134
-  email: gsingh95@uwo.ca
+authorname: Gurpreet Singh
+studentnumber: 250674134
+email: gsingh95@uwo.ca
 teacher: nill
 classname: CS4414
 date: "`r format(Sys.time(), '%B %d, %Y')`"
@@ -25,6 +24,8 @@ fontsize: 11pt
 indent: yes
 bibliography: bibliography.bib
 colorlinks: true
+boldabstract: NOTE this is very important stuff!!
+abstract: this is an example of an abstract.this is an example of an abstract.this is an example of an abstract.this is an example of an abstract.this is an example of an abstract.this is an example of an abstract.this is an example of an abstract.this is an example of an abstract.this is an example of an abstract.this is an example of an abstract.this is an example of an abstract.
 ---
 
 # Description of Applied Problem
