@@ -4,26 +4,26 @@
 % For figures
 \usepackage{graphicx} % more modern
 \usepackage{subfigure} 
+
 % For citations
 \usepackage{natbib}
 
 % For algorithms
 \usepackage{algorithm}
-%\usepackage{algorithmic}
+
+% algorithmic like to break pdflatex(probably ancient package), use at own risk
+% \usepackage{algorithmic}
 
 % As of 2011, we use the hyperref package to produce hyperlinks in the
 % resulting PDF.  If this breaks your system, please commend out the
 % following usepackage line and replace \usepackage{cs4437cs9637} with
-% \usepackage[nohyperref]{cs4437cs9637} above.
+% \usepackage[nohyperref]{cs4437cs9637}
 \usepackage{hyperref}
 
 % Packages hyperref and algorithmic misbehave sometimes.  We can fix
 % this with the following command.
 \newcommand{\theHalgorithm}{\arabic{algorithm}}
 
-% Employ the following version of the ``usepackage'' statement for
-% submitting the draft version of the paper for review.  This will set
-% the note in the first column to ``Under review.  Do not distribute.''
 \usepackage{cs4437cs9637} 
 
 \begin{document}
@@ -36,7 +36,7 @@
 \cstitle{Evaluating Solution Correctness and Problem Difficulty Based on Code
 Metrics}
 
-% It is OKAY to include author information
+% Author information
 \csauthor{Gurpreet Singh (\normalsize\emph{\# 250674134})}{\href{mailto:gsingh95@uwo.ca}{\nolinkurl{gsingh95@uwo.ca}}}
 \csaddress{The University Of Western Ontario}
 
@@ -149,7 +149,7 @@ C++, Java, C and Python are the most popular submissions in this
 dataset. There are 4 versions of C++ but it should be possible to
 process them with one tool.
 
-{[}languages.png{]} \citet{KaggleKernal}
+{[}languages.png{]} \citet{kagglekernal}
 
 \section{Plan for Analysis and
 Visualization}\label{plan-for-analysis-and-visualization}
