@@ -73,7 +73,16 @@ The important features available for each solution are:
 
 The code submissions are written in many different programming languages and each language has it's own code analysis tool. Therefore, to make the process simpler and come up with higher quality results, the data will need to be filtered by the top languages used. Figure 1 shows that C++, Java, C and Python are the most popular submissions in this dataset. There are 4 versions of C++ but it should be possible to process them with one tool.
 
-[languages.png]
+
+\begin{figure}[ht]
+\vskip 0.2in
+\begin{center}
+\centerline{\includegraphics[width=\columnwidth]{images/languages.png}}
+\caption{Frequency of each programming language that occurs in the dataset of solutions }
+\label{languages}
+\end{center}
+\vskip -0.2in
+\end{figure} 
 @kagglekernal
 
 # Plan for Analysis and Visualization
