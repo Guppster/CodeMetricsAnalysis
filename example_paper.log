@@ -1,0 +1,727 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.22)  26 OCT 2017 19:32
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**example_paper.tex
+(./example_paper.tex
+LaTeX2e <2017-04-15>
+Babel <3.13> and hyphenation patterns for 22 language(s) loaded.
+(/opt/texlive/2017/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/opt/texlive/2017/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/opt/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/opt/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/opt/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/opt/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/opt/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/opt/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/opt/texlive/2017/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip43
+\subfigcapskip=\skip44
+\subfigcaptopadj=\dimen105
+\subfigbottomskip=\skip45
+\subfigcapmargin=\dimen106
+\subfiglabelskip=\skip46
+\c@subfigure=\count87
+\c@lofdepth=\count88
+\c@subtable=\count89
+\c@lotdepth=\count90
+\subfig@top=\skip47
+\subfig@bottom=\skip48
+)
+(/opt/texlive/2017/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip49
+\bibsep=\skip50
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count91
+)
+(/opt/texlive/2017/texmf-dist/tex/latex/algorithm/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/opt/texlive/2017/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count92
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+)
+(/opt/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks17
+\c@algorithm=\count93
+)
+(/opt/texlive/2017/texmf-dist/tex/latex/algorithmic/algorithmic.sty
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 <
+     script>window.googleJavaScriptRedirect=1</script><META name="referrer" ...
+
+? q
+OK, entering \batchmode...
+! Misplaced alignment tab character &.
+l.1 ...>var n={navigateTo:function(b,a,d){if(b!=a&
+                                                  &b.google){if(b.google.r){...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.1 ...var n={navigateTo:function(b,a,d){if(b!=a&&
+                                                  b.google){if(b.google.r){b...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1 ..."https://www.cs.rochester.edu/~gildea/2013_
+                                                  Spring/Notes/lecture16/alg...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 1.
+)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.19 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (5.74956pt too wide) in paragraph at lines 1--19
+[]\OT1/cmr/m/n/10 <script>window.googleJavaScriptRedirect=1</script><META name=
+"referrer"
+ []
+
+
+Overfull \hbox (991.75545pt too wide) in paragraph at lines 1--19
+\OT1/cmr/m/n/10 con-tent="origin"><script>var n=navigateTo:function(b,a,d)if(b!
+=ab.google)if(b.google.r)b.google.r=0;b.location.href=d;a.location.replace("abo
+ut:blank");elsea.location.replace(d);;n.navigateTo(window.parent,window,"https:
+//www.cs.rochester.edu/ gildea/2013$[]\OML/cmm/m/it/10 pring=Notes=lecture\OT1/
+cmr/m/n/10 16\OML/cmm/m/it/10 =algorithmic:sty\OT1/cmr/m/n/10 "); \OML/cmm/m/it
+/10 <
+ []
+
+
+Overfull \hbox (3.2222pt too wide) in paragraph at lines 1--19
+\OML/cmm/m/it/10 =script >< noscript >< METAhttp \OMS/cmsy/m/n/10 ^^@ \OML/cmm/
+m/it/10 equiv \OT1/cmr/m/n/10 = "\OML/cmm/m/it/10 refresh\OT1/cmr/m/n/10 "\OML/
+cmm/m/it/10 content \OT1/cmr/m/n/10 = "0; \OML/cmm/m/it/10 URL \OT1/cmr/m/n/10 
+=[]
+ []
+
+
+Overfull \hbox (59.53488pt too wide) in paragraph at lines 1--19
+\OML/cmm/m/it/10 https \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 ==www:cs:rochester:ed
+u= []gildea=\OT1/cmr/m/n/10 2013[]\OML/cmm/m/it/10 pring=Notes=lecture\OT1/cmr/
+m/n/10 16\OML/cmm/m/it/10 =algorithmic:sty[]\OT1/cmr/m/n/10 " \OML/cmm/m/it/10 
+><
+ []
+
+
+(/opt/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+
+(/opt/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/opt/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/opt/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/opt/texlive/2017/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/opt/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen107
+\Hy@linkcounter=\count94
+\Hy@pagecounter=\count95
+
+(/opt/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count96
+
+(/opt/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4498.
+Package hyperref Info: Link nesting OFF on input line 4503.
+Package hyperref Info: Hyper index ON on input line 4506.
+Package hyperref Info: Plain pages OFF on input line 4513.
+Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4751.
+\c@Hy@tempcnt=\count97
+ (/opt/texlive/2017/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5104.
+\XeTeXLinkMargin=\dimen108
+\Fld@menulength=\count98
+\Field@Width=\dimen109
+\Fld@charsize=\dimen110
+Package hyperref Info: Hyper figures OFF on input line 6358.
+Package hyperref Info: Link nesting OFF on input line 6363.
+Package hyperref Info: Hyper index ON on input line 6366.
+Package hyperref Info: backreferencing OFF on input line 6373.
+Package hyperref Info: Link coloring OFF on input line 6378.
+Package hyperref Info: Link coloring with OCG OFF on input line 6383.
+Package hyperref Info: PDF/A mode OFF on input line 6388.
+LaTeX Info: Redefining \ref on input line 6428.
+LaTeX Info: Redefining \pageref on input line 6432.
+\Hy@abspage=\count99
+\c@Item=\count100
+\c@Hfootnote=\count101
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+
+(/opt/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
+\Fld@listcount=\count102
+\c@bookmark@seq@number=\count103
+
+(/opt/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip51
+) (./cs4437cs9637.sty
+Package: cs4437cs9637 2012/01/01 v2.0 ICML Conference Style File
+
+(/opt/texlive/2017/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip52
+\f@nch@O@elh=\skip53
+\f@nch@O@erh=\skip54
+\f@nch@O@olh=\skip55
+\f@nch@O@orh=\skip56
+\f@nch@O@elf=\skip57
+\f@nch@O@erf=\skip58
+\f@nch@O@olf=\skip59
+\f@nch@O@orf=\skip60
+)
+(/opt/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/opt/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/opt/texlive/2017/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 92.
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.235 \flushbottom \twocolumn
+                             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.235 \flushbottom \twocolumn
+                             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+ [1
+
+{/opt/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+\titrun=\box28
+\captionbox=\box29
+\captionboxwid=\dimen111
+\csrulerbox=\box30
+\csrulercount=\count104
+\csruleroffset=\dimen112
+\cv@lineheight=\dimen113
+\cv@boxheight=\dimen114
+\cv@tmpbox=\box31
+\cv@refno=\count105
+\cv@tot=\count106
+\cv@tmpc@=\count107
+\cv@tmpc=\count108
+) (./example_paper.aux)
+\openout1 = `example_paper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+
+(/opt/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count109
+\scratchdimen=\dimen115
+\scratchbox=\box32
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count112
+\MPscratchDim=\dimen116
+\MPnumerator=\count113
+\makeMPintoPDFobject=\count114
+\everyMPtoPDFconversion=\toks19
+)
+(/opt/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/opt/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/opt/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box33
+Package hyperref Info: Link coloring ON on input line 36.
+
+(/opt/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/opt/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count115
+)
+LaTeX Info: Redefining \ref on input line 36.
+LaTeX Info: Redefining \pageref on input line 36.
+LaTeX Info: Redefining \nameref on input line 36.
+ (./example_paper.out) (./example_paper.out)
+\@outlinefile=\write3
+\openout3 = `example_paper.out'.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 57.
+
+
+
+*******************************************************
+Title exceeds size limitations for running head.
+Please supply a shorter form for the running head
+with \cstitlerunning{...} prior to \begin{document}
+*******************************************************
+
+
+
+Overfull \hbox (5.1225pt too wide) in paragraph at lines 59--59
+ [] 
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 60--67
+\OT1/cmr/bx/n/10 doc-u-ment is place-holder text from
+ []
+
+
+Underfull \hbox (badness 3108) in paragraph at lines 60--67
+\OT1/cmr/bx/n/10 ICML. DO NOT USE IT AS A
+ []
+
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 81.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 89.
+ (/opt/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 89.
+ [2
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+
+Package natbib Warning: Citation `langley00' on page 4 undefined on input line 
+261.
+
+
+Package natbib Warning: Citation `anonymous' on page 4 undefined on input line 
+267.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 331.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 331.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+<icml_numpapers.pdf, id=53, pagebox=cropbox, 498.86375pt x 416.55624pt>
+File: icml_numpapers.pdf Graphic file (type pdf)
+<use icml_numpapers.pdf>
+Package pdftex.def Info: icml_numpapers.pdf  used on input line 343. on input l
+ine 343.
+Package pdftex.def Info: Requested size: 234.8775pt x 196.12468pt on input line
+ 343.
+
+Underfull \hbox (badness 1158) in paragraph at lines 348--348
+[][][]\OT1/cmr/m/n/9 Historical lo-ca-tions and num-ber of ac-cepted
+ []
+
+
+Underfull \hbox (badness 2261) in paragraph at lines 379--384
+\OT1/cmr/m/n/10 and ``al-go-rith-mic'' en-vi-ron-ments to for-mat pseu-
+ []
+
+
+! LaTeX Error: Environment algorithmic undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.388 \begin{algorithmic}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.389    \STATE
+                {\bfseries Input:} data $x_i$, size $m$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.390    \REPEAT
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.391    \STATE
+                Initialize $noChange = true$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.392    \FOR
+             {$i=1$ {\bfseries to} $m-1$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.393    \IF
+            {$x_i > x_{i+1}$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.394    \STATE
+                Swap $x_i$ and $x_{i+1}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.395    \STATE
+                $noChange = false$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.396    \ENDIF
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.397    \ENDFOR
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.398    \UNTIL
+               {$noChange$ is $true$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{algorithm} on input line 385 ended by \end{algorithmic}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.399 \end{algorithmic}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \vbox (badness 1546) has occurred while \output is active []
+
+ [5 <./icml_numpapers.pdf>]
+
+Package natbib Warning: Citation `Samuel59' on page 6 undefined on input line 4
+63.
+
+
+Package natbib Warning: Citation `Samuel59' on page 6 undefined on input line 4
+65.
+
+
+Package natbib Warning: Citation `kearns89' on page 6 undefined on input line 4
+66.
+
+
+Package natbib Warning: Citation `Samuel59' on page 6 undefined on input line 4
+66.
+
+
+Package natbib Warning: Citation `mitchell80' on page 6 undefined on input line
+ 466.
+
+
+Package natbib Warning: Citation `MachineLearningI' on page 6 undefined on inpu
+t line 468.
+
+
+Package natbib Warning: Citation `Samuel59' on page 6 undefined on input line 4
+79.
+
+
+Package natbib Warning: Citation `langley00' on page 6 undefined on input line 
+479.
+
+
+Package natbib Warning: Citation `Newell81' on page 6 undefined on input line 4
+79.
+
+
+Package natbib Warning: Citation `DudaHart2nd' on page 6 undefined on input lin
+e 479.
+
+
+Package natbib Warning: Citation `MachineLearningI' on page 6 undefined on inpu
+t line 479.
+
+
+Package natbib Warning: Citation `mitchell80' on page 6 undefined on input line
+ 480.
+
+
+Package natbib Warning: Citation `kearns89' on page 6 undefined on input line 4
+80.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package natbib Warning: Citation `langley00' undefined on input line 517.
+
+No file example_paper.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 522.
+ [6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 522.
+ (./example_paper.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 522.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 522.
+Package rerunfilecheck Info: File `example_paper.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 522.
+ ) 
+Here is how much of TeX's memory you used:
+ 6044 strings out of 494432
+ 87857 string characters out of 6168432
+ 186990 words of memory out of 5000000
+ 9303 multiletter control sequences out of 15000+600000
+ 11130 words of font info for 40 fonts, out of 8000000 for 9000
+ 319 hyphenation exceptions out of 8191
+ 31i,11n,45p,418b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
+</opt/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/texliv
+e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></opt/texlive/2017/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></opt/texlive/2017/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></opt/texlive/2017/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi10.pfb></opt/texlive/2017/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi7.pfb></opt/texlive/2017/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></opt/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr6.pfb></opt/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
+pfb></opt/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl9.pfb></opt/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/texlive/2017/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/texlive/2017/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy9.pfb></opt/texlive/2017/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti10.pfb></opt/texlive/2017/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmtt10.pfb>
+Output written on example_paper.pdf (6 pages, 235408 bytes).
+PDF statistics:
+ 145 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+
