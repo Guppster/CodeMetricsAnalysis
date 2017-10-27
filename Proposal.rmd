@@ -15,6 +15,7 @@ subsubtitle: ""
 runhead: "Project Proposal"
 authorname: Gurpreet Singh
 studentnumber: 250674134
+institute: The University Of Western Ontario
 email: gsingh95@uwo.ca
 teacher: nill
 classname: CS4414
