@@ -8,7 +8,7 @@ output:
     fig_caption: true
     latex_engine: pdflatex
     template: ./cs4414.tex
-title: "Project Proposal"
+title: "Evaluating Solution Correctness and Problem Difficulty Based on Code Metrics"
 subtitle: ""
 subsubtitle: ""
 
@@ -31,11 +31,11 @@ abstract: this is an example of an abstract.this is an example of an abstract.th
 
 # Description of Applied Problem
 
-## Something
+## Problem
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta mauris sit amet finibus lacinia. Nunc id pharetra tortor, quis scelerisque tellus. Nunc at est nec sapien tincidunt ultricies a quis mi. Curabitur sed sem vitae ipsum varius molestie. Integer sed arcu velit. Fusce ornare malesuada dolor, ut finibus arcu ornare ut. Nam tincidunt sem in tempor pellentesque. Integer efficitur, nisl vel euismod ultricies, nisl orci volutpat orci, nec ultrices nisi tortor id eros. 
+A large amount of educational material related to programming exists on the internet but the majority of which is not well structured or presented. An applied problem that can be observed from educational material found online is that code quality is often left mutually exclusive from code functionality. This leads to some readers believing it is acceptable to write code that produces the correct result even if the process behind it is not correct. Online code challenge websites like CodeChef.com do not take into account the style and quality metrics of a code submission when judging competitions. Cutting corners in the learning process advances into a complete disregard for best practices in open source software and in the workplace which results in a larger amount of errors. (site bad code quality = errors)
 
-## Something else
+## Effects of the Problem
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta mauris sit amet finibus lacinia. Nunc id pharetra tortor, quis scelerisque tellus. Nunc at est nec sapien tincidunt ultricies a quis mi. Curabitur sed sem vitae ipsum varius molestie. Integer sed arcu velit. Fusce ornare malesuada dolor, ut finibus arcu ornare ut. Nam tincidunt sem in tempor pellentesque. Integer efficitur, nisl vel euismod ultricies, nisl orci volutpat orci, nec ultrices nisi tortor id eros. 
 
