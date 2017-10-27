@@ -49,12 +49,14 @@ Metrics}
 ]
 
 \begin{abstract} 
-{\bf NOTE this is very important stuff!!} this is an example of an abstract.this is an example of an abstract.this
-is an example of an abstract.this is an example of an abstract.this is
-an example of an abstract.this is an example of an abstract.this is an
-example of an abstract.this is an example of an abstract.this is an
-example of an abstract.this is an example of an abstract.this is an
-example of an abstract. \end{abstract} 
+{\bf Discovering the effects of code style on code functionality and problem
+structure.} This study aims to showcase how well formatted, reusable and
+maintainable code is fundamentally better in all circumstances by
+looking at over 1 million results from a competitive programming website
+and analyzing the correlation between question and solution. The goal is
+to promote code quality checking in online `just in time' teaching
+resources to improve the performance of interviewers, researchers, and
+students. \end{abstract} 
 
 
 \section{Description of Applied
@@ -68,8 +70,8 @@ presented. An applied problem that can be observed from educational
 material found online is that code quality is often left mutually
 exclusive from code functionality. \citet{justintimeteaching}
 
-This leads to some readers believing it is acceptable to write code that
-produces the correct result even if the process behind it is not
+This leads to some students believing it is acceptable to write code
+that produces the correct result even if the process behind it is not
 correct. Online code challenge websites like CodeChef.com do not take
 into account the style and quality metrics of a code submission when
 judging competitions. \citet{codechef} Cutting corners in the learning
@@ -128,6 +130,7 @@ more than sufficient to make a training and test data set.
 The important features available for each question are:
 
 \begin{itemize}
+\tightlist
 \item
   title
 \item
@@ -143,6 +146,7 @@ The important features available for each question are:
 The important features available for each solution are:
 
 \begin{itemize}
+\tightlist
 \item
   status (correct or wrong)
 \item
@@ -161,10 +165,10 @@ languages}\label{filtering-by-popular-languages}
 The code submissions are written in many different programming languages
 and each language has it's own code analysis tool. Therefore, to make
 the process simpler and come up with higher quality results, the data
-will need to be filtered by the top languages used. Figure 1 shows that
-C++, Java, C and Python are the most popular submissions in this
-dataset. There are 4 versions of C++ but it should be possible to
-process them with one tool.
+will need to be filtered by the top languages used.
+Figure\textasciitilde{}\ref{languages} shows that C++, Java, C and
+Python are the most popular submissions in this dataset. There are 4
+versions of C++ but it should be possible to process them with one tool.
 
 \begin{figure}[ht]
 \vskip 0.2in
@@ -176,7 +180,7 @@ process them with one tool.
 \vskip -0.2in
 \end{figure}
 
-\citet{kagglekernal}
+\citet{kernalnlp}
 
 \section{Plan for Analysis and
 Visualization}\label{plan-for-analysis-and-visualization}
@@ -187,20 +191,40 @@ In order to make the connection between code functionality and code
 style, a large part of the experiment is obtaining a accurate and
 unbiased metric for code quality. Since different tools produce
 different metrics, a way to normalize the results into a comparable
-format will need to be discovered. Once a code quality metric is
-associated with each solution, I will aim to discover the correlation
-between that metric and the difficulty level stated on CodeChef.
+format will need to be discovered. Some options for code quality tools
+are: CMetrics, cpplint, CScout, Findbugs, ckjm, pydocstring, xenon and
+pylint. Once a code quality metric is associated with each solution, I
+will aim to discover the correlation between that metric and the
+difficulty level stated on CodeChef. From those statistics I could use
+correlation matrices as visualizations to show how accurate the CodeChef
+difficulty level is.
 
-\subsection{Technology Breakdown}\label{technology-breakdown}
+\subsection{NLP on Questions}\label{nlp-on-questions}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta
-mauris sit amet finibus lacinia. Nunc id pharetra tortor, quis
-scelerisque tellus. Nunc at est nec sapien tincidunt ultricies a quis
-mi. Curabitur sed sem vitae ipsum varius molestie. Integer sed arcu
-velit. Fusce ornare malesuada dolor, ut finibus arcu ornare ut. Nam
-tincidunt sem in tempor pellentesque. Integer efficitur, nisl vel
-euismod ultricies, nisl orci volutpat orci, nec ultrices nisi tortor id
-eros.
+Another possible analysis could be made by processing the question
+statements using natural language processing and see what kinds of
+statements are associated with good code style and what kinds of
+statements result in more failures. \citet{kernalnlp}
+
+\subsection{Code Equivalence}\label{code-equivalence}
+
+Using some set code metric number that divides the solution set into
+two, high quality and low quality, we can test to find a common
+structure within these submissions to pin point where most contestants
+are running into quality problems. \citet{kernalequival}
+
+Once a set of common structures are defined, this could also be tied
+back in to the NLP data we aggregated to discover trends showing what
+question types produce each structure of code. The end result could be
+visualized with a classifier, classifying questions into solution
+structure categories.
+
+\subsection{Conclusions}\label{conclusions}
+
+From this analysis we should be able to conclude how much of an impact
+good code style has on achieving high functionality and how different
+question types might skew the chances of high quality or low quality
+code.
 
 \bibliography{bibliography.bib}
 \bibliographystyle{plainnat}
