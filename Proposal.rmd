@@ -27,7 +27,11 @@ abstract: this is an example of an abstract.this is an example of an abstract.th
 
 ## Problem
 
-A large amount of educational material related to programming exists on the internet but the majority of which is not well structured or presented. An applied problem that can be observed from educational material found online is that code quality is often left mutually exclusive from code functionality. This leads to some readers believing it is acceptable to write code that produces the correct result even if the process behind it is not correct. Online code challenge websites like CodeChef.com do not take into account the style and quality metrics of a code submission when judging competitions. Cutting corners in the learning process advances into a complete disregard for best practices in open source software and in the workplace which results in a larger amount of errors. (site bad code quality = errors)
+A large amount of educational material related to programming exists on the internet but the majority of which is not well structured or presented. An applied problem that can be observed from educational material found online is that code quality is often left mutually exclusive from code functionality. @justintimeteaching
+
+This leads to some readers believing it is acceptable to write code that produces the correct result even if the process behind it is not correct. Online code challenge websites like CodeChef.com do not take into account the style and quality metrics of a code submission when judging competitions. @codechef Cutting corners in the learning process advances into a complete disregard for best practices in open source software and in the workplace which results in a larger amount of errors. Readability of code is an essential metric in software engineering and can be improved even with simple additions of whitespace between lines. @codereadability
+
+Computer code written by researchers and other individuals who are just trying to accomplish a result in any way possible is often of the worse quality. This is because they learn using the 'just in time' mentality and the resources online that promote this mentality disregard code quality. @justintimeteaching Lack of code quality directly reduces it's re-usability because other programmers have a harder time understanding what the code is doing. If these teaching resources could use questions and checks that promote better code quality, many technical innovations could be made. Researchers would be more educated on how to create reusable code and this would influence developers to take their ideas and apply them to real life use cases. @reusability
 
 Code quality post processing software is often used in production development environments to ensure good style choices. These checks are much less useful at this senior level than they would be at an educational level. If programming style can be judged on a submission, companies conducting technical interviews will be able to better judge applicants and make a more informed decision. 
 
@@ -73,7 +77,6 @@ The important features available for each solution are:
 
 The code submissions are written in many different programming languages and each language has it's own code analysis tool. Therefore, to make the process simpler and come up with higher quality results, the data will need to be filtered by the top languages used. Figure 1 shows that C++, Java, C and Python are the most popular submissions in this dataset. There are 4 versions of C++ but it should be possible to process them with one tool.
 
-
 \begin{figure}[ht]
 \vskip 0.2in
 \begin{center}
@@ -89,7 +92,7 @@ The code submissions are written in many different programming languages and eac
 
 ## Description
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta mauris sit amet finibus lacinia. Nunc id pharetra tortor, quis scelerisque tellus. Nunc at est nec sapien tincidunt ultricies a quis mi. Curabitur sed sem vitae ipsum varius molestie. Integer sed arcu velit. Fusce ornare malesuada dolor, ut finibus arcu ornare ut. Nam tincidunt sem in tempor pellentesque. Integer efficitur, nisl vel euismod ultricies, nisl orci volutpat orci, nec ultrices nisi tortor id eros. 
+In order to make the connection between code functionality and code style, a large part of the experiment is obtaining a accurate and unbiased metric for code quality. Since different tools produce different metrics, a way to normalize the results into a comparable format will need to be discovered. Once a code quality metric is associated with each solution, I will aim to discover the correlation between that metric and the difficulty level stated on CodeChef.
 
 ## Technology Breakdown
 

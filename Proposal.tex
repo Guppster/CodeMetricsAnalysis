@@ -66,14 +66,31 @@ A large amount of educational material related to programming exists on
 the internet but the majority of which is not well structured or
 presented. An applied problem that can be observed from educational
 material found online is that code quality is often left mutually
-exclusive from code functionality. This leads to some readers believing
-it is acceptable to write code that produces the correct result even if
-the process behind it is not correct. Online code challenge websites
-like CodeChef.com do not take into account the style and quality metrics
-of a code submission when judging competitions. Cutting corners in the
-learning process advances into a complete disregard for best practices
-in open source software and in the workplace which results in a larger
-amount of errors. (site bad code quality = errors)
+exclusive from code functionality. \citet{justintimeteaching}
+
+This leads to some readers believing it is acceptable to write code that
+produces the correct result even if the process behind it is not
+correct. Online code challenge websites like CodeChef.com do not take
+into account the style and quality metrics of a code submission when
+judging competitions. \citet{codechef} Cutting corners in the learning
+process advances into a complete disregard for best practices in open
+source software and in the workplace which results in a larger amount of
+errors. Readability of code is an essential metric in software
+engineering and can be improved even with simple additions of whitespace
+between lines. \citet{codereadability}
+
+Computer code written by researchers and other individuals who are just
+trying to accomplish a result in any way possible is often of the worse
+quality. This is because they learn using the `just in time' mentality
+and the resources online that promote this mentality disregard code
+quality. \citet{justintimeteaching} Lack of code quality directly
+reduces it's re-usability because other programmers have a harder time
+understanding what the code is doing. If these teaching resources could
+use questions and checks that promote better code quality, many
+technical innovations could be made. Researchers would be more educated
+on how to create reusable code and this would influence developers to
+take their ideas and apply them to real life use cases.
+\citet{reusability}
 
 Code quality post processing software is often used in production
 development environments to ensure good style choices. These checks are
@@ -166,14 +183,13 @@ Visualization}\label{plan-for-analysis-and-visualization}
 
 \subsection{Description}\label{description}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta
-mauris sit amet finibus lacinia. Nunc id pharetra tortor, quis
-scelerisque tellus. Nunc at est nec sapien tincidunt ultricies a quis
-mi. Curabitur sed sem vitae ipsum varius molestie. Integer sed arcu
-velit. Fusce ornare malesuada dolor, ut finibus arcu ornare ut. Nam
-tincidunt sem in tempor pellentesque. Integer efficitur, nisl vel
-euismod ultricies, nisl orci volutpat orci, nec ultrices nisi tortor id
-eros.
+In order to make the connection between code functionality and code
+style, a large part of the experiment is obtaining a accurate and
+unbiased metric for code quality. Since different tools produce
+different metrics, a way to normalize the results into a comparable
+format will need to be discovered. Once a code quality metric is
+associated with each solution, I will aim to discover the correlation
+between that metric and the difficulty level stated on CodeChef.
 
 \subsection{Technology Breakdown}\label{technology-breakdown}
 
