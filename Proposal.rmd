@@ -9,19 +9,12 @@ output:
     latex_engine: pdflatex
     template: ./cs4414.tex
 title: "Evaluating Solution Correctness and Problem Difficulty Based on Code Metrics"
-subtitle: ""
-subsubtitle: ""
-
 runhead: "Project Proposal"
 authorname: Gurpreet Singh
 studentnumber: 250674134
 institute: The University Of Western Ontario
 email: gsingh95@uwo.ca
-teacher: nill
-classname: CS4414
 date: "`r format(Sys.time(), '%B %d, %Y')`"
-geometry: margin=1in
-fontsize: 11pt
 indent: yes
 bibliography: bibliography.bib
 colorlinks: true
@@ -35,19 +28,52 @@ abstract: this is an example of an abstract.this is an example of an abstract.th
 
 A large amount of educational material related to programming exists on the internet but the majority of which is not well structured or presented. An applied problem that can be observed from educational material found online is that code quality is often left mutually exclusive from code functionality. This leads to some readers believing it is acceptable to write code that produces the correct result even if the process behind it is not correct. Online code challenge websites like CodeChef.com do not take into account the style and quality metrics of a code submission when judging competitions. Cutting corners in the learning process advances into a complete disregard for best practices in open source software and in the workplace which results in a larger amount of errors. (site bad code quality = errors)
 
-## Effects of the Problem
+Code quality post processing software is often used in production development environments to ensure good style choices. These checks are much less useful at this senior level than they would be at an educational level. If programming style can be judged on a submission, companies conducting technical interviews will be able to better judge applicants and make a more informed decision. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta mauris sit amet finibus lacinia. Nunc id pharetra tortor, quis scelerisque tellus. Nunc at est nec sapien tincidunt ultricies a quis mi. Curabitur sed sem vitae ipsum varius molestie. Integer sed arcu velit. Fusce ornare malesuada dolor, ut finibus arcu ornare ut. Nam tincidunt sem in tempor pellentesque. Integer efficitur, nisl vel euismod ultricies, nisl orci volutpat orci, nec ultrices nisi tortor id eros. 
+This study will focus on proving that code quality can have an influence on code functionality, as well as which kinds of questions influence good or bad code styles.
+
+## Proposed Solution
+
+A solution to these problems is linking the scoring process in programming problems to a metric derived from running code quality checks on the submission.
+
+Not only will this analysis benefit educational institutes but also companies and competitions that judge people on their code submissions. 
 
 # Description of Available Data
 
-## Something
+## CodeChef Dataset
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta mauris sit amet finibus lacinia. Nunc id pharetra tortor, quis scelerisque tellus. Nunc at est nec sapien tincidunt ultricies a quis mi. Curabitur sed sem vitae ipsum varius molestie. Integer sed arcu velit. Fusce ornare malesuada dolor, ut finibus arcu ornare ut. Nam tincidunt sem in tempor pellentesque. Integer efficitur, nisl vel euismod ultricies, nisl orci volutpat orci, nec ultrices nisi tortor id eros. 
+CodeChef.com is a competitive programming web application that has posted all of their questions and solutions onto the data science website, Kaggle. The data consists of a questions comma separated file, a solutions comma separated file and 3 files that show the code associated with each solution id. The set contains about 1000 problem statements and over 1 million code solutions submitted. This should be a more than sufficient to make a training and test data set. 
 
-## Something else
+The important features available for each question are:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta mauris sit amet finibus lacinia. Nunc id pharetra tortor, quis scelerisque tellus. Nunc at est nec sapien tincidunt ultricies a quis mi. Curabitur sed sem vitae ipsum varius molestie. Integer sed arcu velit. Fusce ornare malesuada dolor, ut finibus arcu ornare ut. Nam tincidunt sem in tempor pellentesque. Integer efficitur, nisl vel euismod ultricies, nisl orci volutpat orci, nec ultrices nisi tortor id eros. 
+- title
+
+- link
+
+- difficulty level
+
+- question statement
+
+- time limit
+
+The important features available for each solution are:
+
+- status (correct or wrong)
+
+- time taken
+
+- memory taken
+
+- language written in
+
+- solution url
+
+## Filtering by popular languages
+
+The code submissions are written in many different programming languages and each language has it's own code analysis tool. Therefore, to make the process simpler and come up with higher quality results, the data will need to be filtered by the top languages used. Figure 1 shows that C++, Java, C and Python are the most popular submissions in this dataset. There are 4 versions of C++ but it should be possible to process them with one tool.
+
+[languages.png]
+@KaggleKernal
 
 # Plan for Analysis and Visualization
 
