@@ -12,6 +12,10 @@
 \newcommand{\T}{\mathsf{T}}
 \newcommand{\x}{\mathbf{x}}
 \newcommand{\w}{\mathbf{w}}
+\renewcommand{\T}{\mathsf{T}}
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\y}{\mathbf{y}}
+
 
 \begin{document}
   \maketitle
@@ -158,6 +162,244 @@
             ${\cal X}$ to some other space ${\cal X}'$, then do linear
             regression in the transformed space\\
     2.  Use a different model space/hypothesis class\newline
+
+  \section{Performance Evaluation}
+
+  \subsection{Performance of a Fixed Hypothesis}
+   Define the loss (error) of the hypothesis on an example $(\x, y)$ as
+		$$L(h(\x) ,y)$$
+
+  Given a model $h$, (which could have come from anywhere), its
+    generalization error is:
+    $$E[L(h({{\bf X}}),Y)]$$
+
+  Given a set of data points $(\x_i, y_i)$ that are realizations of $({{\bf X}},Y)$, we can compute the empirical error
+    $$\bar\ell_{h,n} = \frac{1}{n}\sum_{i=1}^n L(h({{\x }}_i),y_i)$$
+
+  \subsection{Sample Mean}
+
+  Given a dataset, $\bar x_n$ is a fixed number. We use $\bar X_n$ to denote the random variable corresponding 
+  to the sample mean computed from a randomly drawn dataset of size $n$.
+
+  \subsection{Statistics, Parameters, and Estimation}
+  A \texttt{statistic} is any summary of a dataset. (E.g. $\bar x_n$, sample median.)\\
+  A statistic is the result of a \texttt{function} applied to a dataset.\newline
+
+  A \texttt{parameter} is any summary of the distribution of a random variable. (E.g. $\mu_X$, median.)\\
+  A parameter is the result of a \texttt{function} applied to a distribution.\newline
+
+  \texttt{Estimation} uses a \texttt{statistic} (e.g. $\bar{x}_n$) to estimate a \texttt{parameter}
+  (e.g. $\mu_X$) of the \texttt{distribution} of a \texttt{random variable}.\\
+    - \texttt{Estimate}: value obtained from a specific dataset\\
+    - \texttt{Estimator}: function (e.g. sum, divide by n) used to compute the estimate\\
+    - \texttt{Estimand}: parameter of interest\newline
+
+  The distribution of an estimator is called a \texttt{sampling distribution}
+
+  \subsection{Bias}
+
+  The expected difference between estimator and parameter. For example,\\
+
+$$ E[\bar{X}_n - \mu_X] $$
+
+  If 0, estimator is unbiased.\\
+  Sometimes, $\bar{x}_n > \mu_X$, sometimes $\bar{x}_n < \mu_X$, but the long run average of these differences will be zero.
+
+  \subsection{Variance}
+
+  The expected squared difference between estimator and its mean\\
+  $$ E[(\bar{X}_n - E[\bar{X}_n])^2] $$
+  -   Positive for all interesting estimators.\\
+  -   For an unbiased estimator\\
+  $$ E[(\bar{X}_n - \mu_X)^2] $$\\
+  -   Sometimes, $\bar{x}_n > \mu_X$, sometimes $\bar{x}_n < \mu_X$, but the \texttt{squared differences} are all positive and do not cancel out.
+
+  \subsection{Normal Distribution}
+
+  Normal distribution is defined by two parameters: $\mu_X, \sigma^2_X$.\\
+  For an estimator like $\bar{X}_n$, if we know $\mu_{\bar{X}_n}$ and $\sigma^2_{\bar{X}_n}$, then we can say a lot about how good it is.
+
+  \subsection{Central Limit Theorem}
+
+  The sampling distribution of $\bar X_n$ is approximately normal if $n$ is big enough.\\
+  $$ \sigma_n^2 = \frac{\sigma^2}{\sqrt{n}} $$ 
+  is called the \texttt{standard error} and $\sigma^2$ is the variance of $X$.
+
+  \subsection{Confidence Interval}
+
+  Typically, we specify confidence given by $1 - \alpha$\\
+  Use the sampling distribution to get  
+  an interval that traps the parameter (estimand) with probability $1 - \alpha$.
+
+  \subsection{Test Sets}
+
+  Training error underestimates generalization error. It is a \texttt{biased estimator}.\\
+  Create a test set Possibly of size $n = (1.96)^2\frac{\sigma_L^2}{d^2}$ where $\sigma_L^2$ 
+  is the variance of the loss (which has to be guessed or estimated from training) and $d$ is half-width of a 95\% confidence interval.
+
+  \section{Model Selection}
+
+  \subsection{Overfitting}
+  
+  Larger model spaces *always* lead to lower training error.\\
+  Small training error, large generalization error is known as \texttt{overfitting}
+
+  \subsection{Strategy 1: A Validation Set}
+  A separate \texttt{validation set} can be used for model selection.\\
+    - Train on the training set using each proposed model space\\
+    - Evaluate each on the validation set, identify the one with lowest *validation* error\\
+    - Choose the simplest model with performance < 1 std. error worse than the best.
+
+  \subsection{Problems with Single-Partition Approach}
+  Pros:\\
+    -  Measures what we want: Performance of the actual learned model.\\
+    -  Simple\\
+  Cons:\\
+    -  Smaller effective training sets make performance and performance estimates more variable.\\
+    -  Small validation sets can give poor model selection\\
+    -  Small test sets can give poor estimates of performance\\
+    -  For a test set of size 100, with 60 correct classifications,
+        95% C.I. for actual accuracy is $(0.497,0.698)$.\\
+
+  \subsection{k-fold cross-validation}
+  Divide the instances into $k$ disjoint partitions or folds of size $n/k$\\
+  Loop through the partitions $i = 1 ... k$:\\
+    -  Partition $i$ is for evaluation (i.e., estimating the performance of the algorithm after learning is done)\\
+    -  The rest are used for training (i.e., choosing the specific model within the space)\\
+  'Cross-Validation Error' is the average error on the evaluation partitions. Has lower variance than error on one partition.\newline 
+
+  As with a single validation set, select most parsimonious model whose error is no more than one standard error above the error of the best model.
+
+  \subsection{Summary for Model Selection}
+   The training error decreases with the complexity (size) of the model space\\
+   Generalization error decreases at first, then starts increasing\\
+   Set aside a validation set helps us find a good model space\\
+   We then can report unbiased error estimate, using a test set\\
+   Cross-validation is a lower-variance but possibly biased version of this approach. It is standard.\\
+
+   \section{Classification}
+   
+   \subsection{Linear Methods for Classification}
+   Classification tasks\\
+   Loss functions for classification\\
+   Logistic Regression\\
+   Support Vector Machines\\
+
+   \subsection{Logistic Regression}
+   Determines the probaability of a feature occuring based on some numeric features.\\
+   Perdict the probability (0 to 1) of anything occuring\\
+   Specify dependent and independent features\\
+   Can classify groups of data using probability categories like all above 0.5 in one and below 0.5 in another
+
+   \subsection{Decision Boundary}
+   Just cut the data into parts using parts some summary of the data\\
+   Cut off the data where Y is 1 and x is greater than 0.25\\
+   Class = R if $\Pr(Y=1|X=x) > 0.25$\\
+   
+   Cut off the data where Y is 1 and x is greater than 0.5\\
+   Class = R if $\Pr(Y=1|X=x) > 0.5$\\
+
+   \subsection{Linear Support Vector Machines}
+   Linear classifiers that focus on learning the decision
+    boundary rather than the conditional distribution
+    $P(Y=y|\mathbf{X}=\x)$
+
+  \subsection{Perceptrons}
+  If the data is linearly seperatable, the perceptron will find the solution given infinte iterations\\
+  Blindingly Fast\\
+  Solutions are non-unique\\
+
+  \subsection{Perceptron Learning Rule}
+
+    Initialize ${{\mathbf{w}}}$ and $w_0$ randomly\\
+    While any training examples remain incorrecty classified\\
+        Loop through all misclassified examples\\
+        For misclassified example $i$, perform the updates:\\
+        $${{\mathbf{w}}}\gets {{\mathbf{w}}}+ \delta y_i{{\x}}_i,~~~~~w_0\gets w_0 + \delta y_i$$
+        where $\delta$ is a step-size parameter.
+
+  \subsection{Support Vector Machines}
+
+  A optimization criterion (the "margin") guarantees uniqueness and has theoretical advantages\\
+  Natural handling nonseparable data by allowing mistakes\\
+  An efficient way of operating in expanded  feature spaces: "kernel trick"\\
+  SVMs can also be used for multiclass classification and regression.\\
+
+  \subsection{Soft Margin Classifiers}
+  
+  Constraints are relaxed and misclassifiations are allowed.
+
+  \subsection{Visualizations}
+  
+  \texttt{Scatterplot Matrix} shows the relation between all variables and is a good first step.\\
+  \texttt{Correlation Plot/Matrix} shows how two variables are correlated or dependent on each other
+
+  \section{Non-Linear Models}
+
+  \subsection{Bias-Variance of K-NN (K Nearest Neighbors)}
+  If $k$ is low, very non-linear functions can be approximated, but we also 
+  capture the noise in the data Bias is low, variance is high\\
+
+  If $k$ is high, the output is much smoother, less sensitive to data variation
+  High bias, low variance\\
+
+  A validation set can be used to pick the best $k$
+  
+  \subsection{Lazy and Eager Learning}
+  \texttt{Lazy} wait for query before generalizing\\
+    E.g. Nearest Neighbor
+
+  \texttt{Eager} generalize before seeing query
+
+    E.g. SVM, Linear regression
+
+  \subsection{Pros and Cons of Lazy and Eager}
+  Eager learners must create global approximation\\
+  Lazy learners can create many local approximations\\
+  An eager learner does the work off-line, summarizes lots of data with few parameters\\
+  A lazy learner has to do lots of work sifting through the data at query time\\
+  Typically lazy learners take longer time to answer queries and require more space\\
+
+  \subsection{When to consider Non-parametric methods}
+  When you have: instances that map to points in ${\mathbb R}^p$, 
+not too many attributes per instance ($< 20$), lots of data\\
+
+  - Advantages:\\
+
+    -   Training is very fast\\
+    -   Easy to learn complex functions over few variables\\
+    -   Can give back confidence intervals in addition to the prediction\\
+    -   Often wins if you have enough data\\
+
+  - Disadvantages:\\
+
+    -   Slow at query time\\
+    -   Query answering complexity depends on the number of instances\\
+    -   Easily fooled by irrelevant attributes\\
+    -   'Inference' is not possible\\
+
+  \subsection{Stop Overfitting in Decision Tree}
+
+  1.  Stop growing the tree when further splitting the data does not
+        yield a statistically significant improvement\\
+
+  2.  Grow a full tree, then \texttt{prune} the tree, by
+        eliminating nodes
+
+  \subsection{Decision Tree Summary}
+  -   Very fast learning algorithms \\
+-   Attributes may be discrete or continuous, no preprocessing needed\\
+-   Provide a general representation of classification rules\\
+-   Easy to understand! Though\\
+    -   Exact tree output may be sensitive to small changes in data\\
+    -   With many features, tests may not be meaningful\\
+-   In standard form, good for (nonlinear) piecewise axis-orthogonal
+    decision boundaries â€“ not good with smooth, curvilinear boundaries\\
+-   In regression, the function obtained is discontinuous, which may not
+    be desirable\\
+-   Good accuracy in practice many applications\\
+
+
 
 
 \end{document}
