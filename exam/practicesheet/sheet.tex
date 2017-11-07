@@ -2,186 +2,162 @@
 \usepackage[ngerman]{babel}
 \usepackage{float}
 \usepackage{xtab}
-\title{Universal Cheat-Sheet} 
-\author{A. C. Hinrichs\\\texttt{adrian.hinrichs@rwth-aachen.de}}
+\title{CS4414 Cheat-Sheet} 
+\author{Gurpreet Singh\\\texttt{gsingh95@uwo.ca}}
 \date{\today}
+
+\newcommand{\Samp}{\mathcal{S}}
+\renewcommand{\Re}{\mathbb{R}}
+\newcommand{\diff}{\mathrm{\,d}}
+\newcommand{\T}{\mathsf{T}}
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\w}{\mathbf{w}}
+
 \begin{document}
   \maketitle
-  \section{\LaTeX--Tools}
-  \subsection{\LaTeX{}mk}
-  \begin{lstlisting}[language=bash]
-    $ latexmk -pvc -pdf -interaction=nonstopmode $TEX-FILE
-  \end{lstlisting} % $ %Hack for Math-highlighting
-  
-  Wenn nur eine \texttt{.tex}-Datei im Verzeichniss vorhanden ist, kann \texttt{\$TEX-FILE}%$
-  weggelassen werden\\
-  \subsection{tlmgr}
-  Um Pakete unter TexLive zu installieren
-  \begin{lstlisting}
-     # tlmgr install $PACKET
-  \end{lstlisting} % $ %Hack for Math-highlighting
-  \section{\LaTeX--Syntax}
-  \subsection{lstlistings}
-  Inlinelistings with
-  \begin{lstlisting}[language=tex]
-    \lstinline{<Code>}
-  \end{lstlisting}
-  \subsection{Other commands}
-  \enquote{Splitted} Footnotes (for use in eg. Math-Environments)
-  \begin{lstlisting}[language=tex]
-    \footnotemark % Prints the mark
-    
-    \footnotetext{#1} %Appends the text to the footnote
-  \end{lstlisting}
-   
-  \section{EMACS}
-  \subsection{File-Management}
-  \begin{tabular}{rl}
-    Open File (new or existing) & C-x C-f\\
-    Save file & C-x C-s\\
-    Save file as & C-x C-w\\
-  \end{tabular}
-  \subsection{Buffers}
-  \begin{tabular}{rl}
-    Move to Buffer...&\\
-    ...with name     & C-x b \texttt{<Name>}\\
-    ...next          & C-x \(\rightarrow\)\\
-    ...previous      & C-x \(\leftarrow\)\\
-    \\
-    Kill Buffer \texttt{<X>} & C-x k \texttt{<X>}\\
-    \\
-    Toogle Read-Only-Mode &C-x C-q\\
-    Change Encoding  & C-x RET r \texttt{<ENC>}\
-  \end{tabular}
-  \subsection{I-Search}
-  \begin{tabular}{rl}
-    Search forward  & C-s \texttt{<String>}\\
-    Search backward & C-r \texttt{<String>}\\
-    Continue Search & C-s C-s \emph{or}\\
-                    & C-r C-r\\
-  \end{tabular}
-  \subsection{Transpose}
-  \begin{tabular}{rl}
-    Transpose Chars  & C-t\\
-    Transpose Words  & M-t\\
-    Transpose Expressions C-M-t
-  \end{tabular}
-  Example: \(12\underline{3}45\overset{\textrm{C-t}}\longmapsto
-  132\underline{4}5\), where the underline indicates the cursor
-  position.
-  \subsection{Kexboard-Macros}
-  \begin{tabular}{rl}
-    Begin recording & C-x (\\
-    End recording   & C-x )\\
-    Execute Macro   & C-x e\\
-  \end{tabular}
-  \subsection{Uncategorized}
-  \begin{tabular}{rl}
-    Repeat \textrm{<CMD>} \textrm{<N>} times & C-u \textrm{<N>} \textrm{<CMD>}\\
-    Open second (e)shell & C-u M-x eshell\\
-    Input Unicode Character & C-x 8 RET <ID> 
-  \end{tabular}
-  \subsection{Org-Mode}
-  
-  \begin{tabular}{rl}
-    Toggle top-level ToDo & C-c C-t\\
-    Toggle checkbox ToDo  & C-c C-c\\
-    Export (see help-view)& C-c C-e <X> <Y>\\
-  \end{tabular}
-  Syntax:
-  \begin{lstlisting}
-    * Heading
-    ** TODO Display Percentage [%]
-      - [ ] Sub-Todo-Item
-      - [X] Another one
-      - [-] One with sub-tasks [/]
-        - [ ] 1
-        - [X] 2
-        - [ ] 3
-  \end{lstlisting}
-  \section{Jekyll}
-  \subsection{Jekyll starten}
-  \begin{lstlisting}[language=bash]
-    $ jekyll serve
-  \end{lstlisting} % $ %Hack for Math-highlighting
-  oder
-  \begin{lstlisting}[language=bash]
-    $ bundle exec jekyll serve
-  \end{lstlisting} % $ %Hack for Math-highlighting
-  
-  \section{Markdown}
-  \subsection{Headers}
-  \begin{lstlisting}
-    # H1
-    ## H2
-    ### H3
-    #### H4
-    ##### H5
-    ###### H6
-  \end{lstlisting}  
-  Alternatively, for H1 and H2, an underline-ish style:
-  \begin{lstlisting}
-    Alt-H1
-    ======
-    
-    Alt-H2
-    ------
-  \end{lstlisting}
-  \subsection{Code}
-  Inline \lstinline{`code`} has \lstinline{`back-ticks around`} it.\\
-  Code-Blocks:
-  \begin{lstlisting}
-    ```python
-    s = "Python syntax highlighting"
-    print s
-    ```
-    
-    ```
-    No language indicated, so no syntax highlighting. 
-    But let's throw in a <b>tag</b>.
-    ```
-  \end{lstlisting}
-  \subsection{Links}
-  \begin{lstlisting}
-    [Display Text]({{ site.baseurl }}/pfad/zur/datei.html)
-  \end{lstlisting}
-  \section{Screen}
-  \subsection{Tastaturbefehle}
-  Funktionierne in einer Sitzung:
-  \begin{table}[H]
-    \footnotesize
-    \begin{xtabular}{rl}
-      Ein neues Fenster öffnen& C-a-c\\
-      Zwischen Fenstern wechseln& C-a-SPC\\
-      Sitzung Trennen & C-a-d\\
-    \end{xtabular}
-  \end{table}
-  \subsection{Shell-Kommandos}
-  Funktionieren ausserhalb von Sitzungen\\
-  Zum start einer neuen Sitzung mit dem Namen \texttt{sitzung1}:
-  \begin{lstlisting}
-    $ screen -S sitzung1
-  \end{lstlisting}%$
-  Zu wiederaufnehmen der Sitzung \texttt{\$SITZUNG}:%$
-  \begin{lstlisting}
-    $ screen -r $SITZUNG
-  \end{lstlisting}%$
-  Wenn nur eine Sitzung im hintergrund läuft kann der Sitzungsname weg
-  gelassen werden.\\
-  Zum auflisten aller Sitzungen:
-  \begin{lstlisting}
-    $ screen -ls 
-  \end{lstlisting}%$
-  Zum trennen einer (nicht geöffneten) Sitzung \texttt{\$SITZUNG}:
-  \begin{lstlisting}
-    $ screen -d $SITZUNG
-  \end{lstlisting}
-  Spiegeln der Sitzung \texttt{\$SITZUNG}:
-  \begin{lstlisting}
-    $ screen -rx $SITZUNG
-  \end{lstlisting}
-  Einen Befehl an die Sitzung \texttt{\$SITZUNG} senden und ausführen:
-  \begin{lstlisting}
-    $ screen -S $SITZUNG -X stuff $'ls -l\n'
-  \end{lstlisting}%$
+  \section{Data Preparation}
+
+  \subsection{Data Cleaning}
+  Data cleaning is the process of detecting and correcting (or removing) corrupt or inaccurate records
+  from a record set, table, or database and refers to identifying incorrect parts of the data and then deleting the dirty or coarse data.
+
+  \section{Statistics}
+
+  \subsection{Definitions}
+  \texttt{BoxPlot}: Extended lines mean Min and Max. Box is third quartile, median and first quartile top to bottom. Suspected outliers are empty dots, outliers are solid dots\newline
+
+  \texttt{Histogram}: Same as a barchart but groups numbers into ranges on the x-axis\newline
+
+  \texttt{Independence}: Two random variables X and Y are independent if Any conditional distribution of $X$ is the same as the marginal distribution of $X$ and knowing about $Y$ provides no information about $X$.\newline
+
+  \texttt{Marginal Distribution}: gives the probabilities of various values of the variables in the subset without reference to the values of the other variables. The sum of the columns.\newline
+
+  \texttt{Conditional Distribution}: shows the probability that a randomly selected item in a sub-population has a characteristic you're interested in. Moving the column (scanning)\newline 
+ 
+  \texttt{Joint Distribution}: $X$ and $Y$ have a joint distribution if their realizations come together as a pair. $(X,Y)$ is a random vector, and realizations may be written $(x_1,y_1), (x_2,y_2), ...$, or $\langle x_1, y_1 \rangle, \langle x_2, y_2 \rangle, ...$ \newline
+
+  \texttt{Sample Mean}: Given a dataset (collection of realizations) $x_1, x_2, ..., x_n$ of $X$, the sample mean is:
+   $$ \bar{x}_n = \frac{1}{n} \sum_i x_i $$
+   Given a dataset, $\bar x_n$ is a fixed number. 
+   It is usually a good estimate of the expected value of a random variable $X$ with an unknown distribution.\newline
+
+  \texttt{Sample space} $\Samp$ is the set of all possible events we might observe. Depends on context.\\
+    - Coin flips: $\Samp = \{ h, t \}$\\
+    - Eruption times: $\Samp = \Re^{\ge 0}$\\
+    - (Eruption times, Eruption waits): $\Samp = \Re^{\ge 0} \times \Re^{\ge 0}$ \newline
+
+  \texttt{An event} is a subset of the sample space.\\
+    - Observe heads: $\{ h \}$\\
+    - Observe eruption for 2 minutes: $\{ 2.0 \}$\\
+    - Observe eruption with length between 1 and 2 minutes and wait between 50 and 70 minutes: $[1,2] \times [50,70]$.
+
+  \subsection{Random Variables}
+
+  \texttt{Random variable} is a mapping from the event space to a number (or vector)\newline
+
+  \texttt{Discrete random variable} take values from a countable set\newline
+
+  \texttt{Continuous random variable} take values in intervals of $\Re$\\For a continuous r.v.\ $X$, $\Pr(X = x) = 0$ for all $x$. There is no probability mass function.
+
+  \subsection{Probability Mass Function} 
+  For a discrete $X$, $p_{X}(x)$ gives $\Pr(X = x)$.\\
+  Requirement: $\sum_{x \in \mathcal{X}} p_{X}(x) = 1$.\\
+  Note that the sum can have an infinite number of terms.\\
+  - Only works on discrete values\\
+  - Sum of probabilities in set needs to be 1
+
+  \subsection{Cumulative Distribution function} 
+  For a discrete $X$, $P_{X}(x)$ gives $\Pr(X \le x)$.\\
+   Requirements:\\
+    - $P$ is nondecreasing\\
+    - $\sup_{x \in \mathcal{X}} P_{X}(x) = 1$
+
+   Note:
+    - $P_X(b) = \sum_{x \le b} p_X(x)$\\
+    - $\Pr(a < X \le b) = P_X(b) - P_X(a)$
+
+   \subsection{Probability Density Function}
+   For continuous $X$, $\Pr(X = x) = 0$ and PMF does not exist. However, we define the Probability Density Function $f_X$:\\
+    - $\Pr(a \le X \le b) = \int_{a}^{b} f_X(x) \diff x$\\
+   Requirement:\\
+    - $\forall x \;f_X(x) > 0$, $\int_{-\infty}^\infty f_X(x) \diff x = 1$\\
+    - Requires a range, doesnt work with discrete values
+
+   \subsection{Cumulative Distribution Function}
+   For a continuous $X$, $F_{X}(x)$ gives $\Pr(X \le x) = \Pr(X \in (-\infty,x])$.\\
+   Requirements: \\
+    - $F$ is nondecreasing\\
+    - $\sup_{x \in \mathcal{X}} F_{X}(x) = 1$\\
+   Note:\\
+    - $F_X(x) = \int_{-\infty}^x f_X(x) \diff x$\\
+    - $\Pr(x_1 < X \le x_2) = F_X(x_2) - F_X(x_1)$
+
+  \section{Supervised Learning}
+
+  \subsection{Definitions}
+
+  \texttt{Supervised Learning} is when correct answers are given to a training model and it uses them to make future perdictions following similar patterns\newline
+
+  \texttt{Columns} are called  input variables or features or attributes\newline
+
+  \texttt{Labels} or output variables are the outcome we are trying to perdict\newline
+
+  \texttt{Training Example} or instance is a row in a table\newline
+
+  \texttt{Data Set} is the whole table\newline
+
+  $h$ is called a predictive model or \texttt{hypothesis}\newline
+
+  \texttt{Classification} Is this A, B or C? (Binary if only 2 categories)\newline
+  \texttt{Regression} How much or how many?\newline
+  \texttt{Clustering} How is this organized?\newline
+  \texttt{Reinforcement} What should i do next?\newline
+
+  \subsection{Example Problem} 
+  Given a data set $D \subset ({{\cal X}}\times {{\cal Y}})^n$, find a function: $$h : {{\cal X}}\rightarrow {{\cal Y}}$$ 
+  such that $h({\bf x})$ is a good predictor for the value of $y$.
+
+  \subsection{Steps to solve a supervised learning problem}
+  1.  Decide what the input-output pairs are.\\
+  2.  Decide how to encode inputs and outputs.\\
+      This defines the input space ${{\cal X}}$, and the output space
+      ${{\cal Y}}$.\\
+  3.  Choose model space/hypothesis class ${{\cal H}}$.\\
+  4.  Choose an error function (cost function) to define the best
+      model in the class\\
+  5.  Choose an algorithm for searching efficiently through the space
+      of models to find the best.\newline
+
+  \subsection{Linear Hypothesis}
+  Suppose $y$ was a linear function of ${\bf x}$:
+    $$h_{\bf w}({\bf x}) = w_0 + w_1 x_1 + w_2 x_2 + \cdots$$
+
+    $w_i$ are called  parameters or weights. Typically include an attribute $x_0=1$ (also called  bias
+    term or  intercept term) 
+
+  \subsection{Choosing Weights}
+
+  \subsection{Error Minimization}
+  Define an error function or a cost function to measure how much our prediction differs from the 'true' answer on the training data.\\
+  The weights should make the prediction as close to the true values as possible.
+
+  \subsection{Picking the error function}
+
+  \subsection{Least Means Squares}
+  Draw a linear line such that the sum of the distance between each the line and each training point (error) is as small as possible.
+
+  \subsection{Linear Regression Summary}
+  The optimal solution (minimizing sum-squared-error) can be computed
+  in polynomial time in the size of the data set.\\
+  A very rare case in which an analytical, exact solution is possible\newline
+
+  \subsection{Improving Linear Regression}
+   1.  Explicitly transform the data, i.e. create additional features\\
+        -   Add cross-terms, higher-order terms\\
+        -   More generally, apply a transformation of the inputs from
+            ${\cal X}$ to some other space ${\cal X}'$, then do linear
+            regression in the transformed space\\
+    2.  Use a different model space/hypothesis class\newline
+
+
 \end{document}
