@@ -1,0 +1,98 @@
+---
+title: "Very Advanced Polyphasic Algorithmic Programming"
+author: "Gurpreet Singh"
+date: '`r Sys.Date()`'
+output:
+  ioslides_presentation:
+    widescreen: true
+    df_print: paged
+---
+
+---
+# Prof wants these things:
+# Explain Problem
+# Explain dataset with example of single entry
+# Explain potential datascience methods
+# Ability to answer questions about data
+# Keep it under 10 mins
+# 5% of mark
+---
+
+## Problem
+
+its some wild shit ya kno. mans  be out here coding and shit
+Subject matter
+What is {Term Definition}
+Programming technologies progress so quickly that textbooks don't work anymore
+
+## Project Plan
+
+Create a way for code to be analyzed and evaluated correctly
+ 
+## Significance
+
+This can help teachers, interviews, etc
+Past work
+
+# Avaliable data
+time for some R fun
+
+## Questions Data {.smaller}
+
+```{r}
+questions <- read.csv("data/questions.csv")
+str(questions)
+head(questions, 2)
+```
+
+## Questions Data {.smaller}
+```{r}
+library(forcats)
+library(ggplot2)
+questions$level = fct_infreq(questions$level)
+qplot(level, fill = level, data = questions, geom = "bar")
+```
+
+## Solution Data {.smaller}
+
+```{r}
+solutions <- read.csv("data/solutions.csv")
+str(solutions)
+head(solutions, 2)
+```
+
+## Solution Data {.smaller}
+
+```{r}
+runtimeErrors <- c("runtime error(SIGABRT)", "runtime error(SIGFPE)", "runtime error(OTHER)", "runtime error(NZEC)", "runtime error(SIGXFSZ)", "runtime error(SIGSEGV)", "")
+solutions$Status <- solutions$Status %>% fct_collapse("runtime errors" = runtimeErrors)
+solutions$Status = fct_infreq(solutions$Status)
+qplot(Status, fill = Status, data = solutions, geom = "bar") + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+## Code Data {.smaller}
+
+```{r}
+code <- read.csv("data/first.csv")
+str(code)
+head(code, 1)
+```
+
+# Plan for Analysis
+
+## Feature creation
+Combining data
+Processing the code into a statistic
+Processing the question into a statistic
+
+## Plan for Visualization
+Scatterplot
+Silhouette plot (for clustering too many dimensions)
+Reduce dimensions using KSNE
+Scatterplot to test efficiency of medol
+
+# Current Issues
+idk what im doing?
+
+## New York City Flights 2013 {.smaller}
+
