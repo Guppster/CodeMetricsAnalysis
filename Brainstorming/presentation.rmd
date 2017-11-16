@@ -1,11 +1,12 @@
 ---
-title: "Very Advanced Polyphasic Algorithmic Programming"
+title: "Evaluating Solution Quality and Problem Difficulty using Code Metrics"
 author: "Gurpreet Singh"
 date: '`r Sys.Date()`'
 output:
   ioslides_presentation:
     widescreen: true
     df_print: paged
+    css: "./ioslides.css"
 ---
 
 ---
@@ -20,7 +21,6 @@ output:
 
 ## Problem
 
-its some wild shit ya kno. mans  be out here coding and shit
 Subject matter
 What is {Term Definition}
 Programming technologies progress so quickly that textbooks don't work anymore
@@ -34,7 +34,7 @@ Create a way for code to be analyzed and evaluated correctly
 This can help teachers, interviews, etc
 Past work
 
-# Avaliable data
+# Exploring the Dataset 
 time for some R fun
 
 ## Questions Data {.smaller}
@@ -92,7 +92,7 @@ Reduce dimensions using KSNE
 Scatterplot to test efficiency of medol
 
 # Current Issues
-idk what im doing?
+idk what im doing? ops
 
-## New York City Flights 2013 {.smaller}
-
+# ASK ME QUESTIONS
+because this wasn't 10 minutes long
