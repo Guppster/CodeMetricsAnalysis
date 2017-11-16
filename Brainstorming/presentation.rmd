@@ -19,21 +19,55 @@ output:
 # 5% of mark
 ---
 
+```{r echo=FALSE, message=FALSE}
+library(RColorBrewer)
+library(forcats)
+library(ggplot2)
+library(SnowballC)
+library(wordcloud)
+library(tm)
+```
+
+## Background Info
+
+- HackerRank
+
+- CodeEval
+
+- CodeChef
+
+- CoderBytes
+
+- TopCoder
+
 ## Problem
 
-Subject matter
-What is {Term Definition}
-Programming technologies progress so quickly that textbooks don't work anymore
+- Programming technologies pop up and disappear faster than textbooks can be printed
 
-## Project Plan
+- Traditional teaching/testing methods being replaced by 'just in time' techniques
 
-Create a way for code to be analyzed and evaluated correctly
- 
+- Researchers and students are learning bad code style by only focusing on getting to the solution
+
+- Interviewers are using online websites to judge code samples that don't consider many important aspects of programming.
+
 ## Significance
 
-This can help teachers, interviews, etc
-Past work
+- Code-Compile-Evaluate loop websites have a large influence on the community
 
+- Programming challenge websites could use this data to better score their puzzles
+
+- HR-Level interviewers could better evaluate candidates
+
+## Project Goals
+
+- Identify which types of questions influence good/bad code style
+
+- Discover the impact of good/bad code style on completion rates
+
+- Make a conclusion about about the effects of factoring in code style as an evaluation measure in regards to accuracy.
+
+- Future plans: Create a website that evaluates users solely based on how well they follow the style guide if their solution is correct
+ 
 # Exploring the Dataset 
 time for some R fun
 
@@ -47,8 +81,6 @@ head(questions, 2)
 
 ## Questions Data {.smaller}
 ```{r}
-library(forcats)
-library(ggplot2)
 questions$level = fct_infreq(questions$level)
 qplot(level, fill = level, data = questions, geom = "bar")
 ```
@@ -70,6 +102,13 @@ solutions$Status = fct_infreq(solutions$Status)
 qplot(Status, fill = Status, data = solutions, geom = "bar") + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
 
+## Solution Data {.smaller}
+
+```{r}
+solutions$Language = fct_infreq(solutions$Language)
+qplot(Language, fill = Language, data = solutions, geom = "bar") + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + guides(fill=FALSE)
+```
+
 ## Code Data {.smaller}
 
 ```{r}
@@ -80,19 +119,48 @@ head(code, 1)
 
 # Plan for Analysis
 
-## Feature creation
-Combining data
-Processing the code into a statistic
-Processing the question into a statistic
+## Feature Creation
+- Link 3 Datasets together (Question/Solution/Code)
 
-## Plan for Visualization
-Scatterplot
-Silhouette plot (for clustering too many dimensions)
-Reduce dimensions using KSNE
-Scatterplot to test efficiency of medol
+- Process code samples into a value that accurately represents it's quality
+  -   Only 3 major languages
+  -   May need to separate dataset into languages to get fair comparison
 
-# Current Issues
-idk what im doing? ops
+- Process the question statement using NLP into a value that represents difficulty.
+- Develop categories of questions using NLP library
 
-# ASK ME QUESTIONS
-because this wasn't 10 minutes long
+## Planned Analysis
+
+### Classifier for acceptance 
+
+- Create a model using logistic regression on the generated code quality feature 
+- Use that as a classifier that will predict if a solution's "Status" (approved/declined)
+
+### Visualizations
+
+- Correlation matrix showing the correlation between solution features and generated code quality feature
+- Scatterplot between NLP derived difficulty and CodeChef difficulty.
+
+## Current Issues
+
+```{r}
+
+words <- Corpus(VectorSource(questions$statement))
+toSpace <- content_transformer(function (x , pattern ) gsub(pattern, " ", x))
+words <- tm_map(words, toSpace, "/")
+words <- tm_map(words, toSpace, "@")
+words <- tm_map(words, toSpace, "\\|")
+words <- tm_map(words, content_transformer(tolower))
+words <- tm_map(words, removeWords, stopwords("english"))
+words <- tm_map(words, removeNumbers)
+words <- tm_map(words, removePunctuation)
+words <- tm_map(words, stripWhitespace)
+words <- tm_map(words, stemDocument)
+v <- sort(rowSums(as.matrix(TermDocumentMatrix(words))),decreasing=TRUE)
+d <- data.frame(word = names(v),freq=v)
+```
+
+## QUESTIONS? {.smaller}
+```{r}
+wordcloud(words = d$word, freq = d$freq, min.freq = 1, max.words=150, random.order=FALSE)
+```
