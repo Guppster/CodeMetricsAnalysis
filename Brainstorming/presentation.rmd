@@ -30,15 +30,13 @@ library(tm)
 
 ## Background Info
 
+### Code-Compile-Evaluate Websites
 - HackerRank
-
 - CodeEval
-
 - CodeChef
-
 - CoderBytes
-
 - TopCoder
+- ![code quality](code_quality.png)
 
 ## Problem
 
