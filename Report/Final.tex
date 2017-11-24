@@ -1,0 +1,146 @@
+% Document class
+\documentclass{article}
+
+% For figures
+\usepackage{graphicx} % more modern
+\usepackage{subfigure} 
+
+% For citations
+\usepackage{natbib}
+
+% For algorithms
+\usepackage{algorithm}
+
+% algorithmic like to break pdflatex(probably ancient package), use at own risk
+% \usepackage{algorithmic}
+
+% As of 2011, we use the hyperref package to produce hyperlinks in the
+% resulting PDF.  If this breaks your system, please commend out the
+% following usepackage line and replace \usepackage{cs4437cs9637} with
+% \usepackage[nohyperref]{cs4437cs9637}
+\usepackage{hyperref}
+
+% Packages hyperref and algorithmic misbehave sometimes.  We can fix
+% this with the following command.
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+\usepackage{cs4437cs9637} 
+
+\begin{document}
+
+% The \cstitle you define below is probably too long as a header.
+% Therefore, a short form for the running title is supplied here:
+\cstitlerunning{Report Draft}
+
+\twocolumn[
+\cstitle{Evaluating Solution Quality and Problem Difficulty Utilizing Code
+Metrics}
+
+% Author information
+\csauthor{Gurpreet Singh (\normalsize\emph{\# 250674134})}{\href{mailto:gsingh95@uwo.ca}{\nolinkurl{gsingh95@uwo.ca}}}
+\csaddress{The University Of Western Ontario}
+
+% You may provide any keywords that you 
+% find helpful for describing your paper; these are used to populate 
+% the "keywords" metadata in the PDF but will not be shown in the document
+\cskeywords{}
+
+\vskip 0.3in
+]
+
+\begin{abstract} 
+{\bf Discovering the effects of code style on code functionality and problem
+structure.} This study aims to showcase how well formatted, reusable and
+maintainable code is fundamentally better in all circumstances by
+looking at over 1 million results from a competitive programming website
+and analyzing the correlation between question and solution. The goal is
+to promote code quality checking in online `just in time' teaching
+resources to improve the performance of interviewers, researchers, and
+students. \end{abstract} 
+
+
+\section{Background}\label{background}
+
+\subsection{Problem}\label{problem}
+
+A large amount of educational material related to programming exists on
+the internet but the majority of which is not well structured or
+presented. An applied problem that can be observed from educational
+material found online is that code quality is often left mutually
+exclusive from code functionality. \citet{justintimeteaching}
+
+This leads to some students believing it is acceptable to write code
+that produces the correct result even if the process behind it is not
+correct. Online code challenge websites like CodeChef.com do not take
+into account the style and quality metrics of a code submission when
+judging competitions. \citet{codechef} Cutting corners in the learning
+process advances into a complete disregard for best practices in open
+source software and in the workplace which results in a larger amount of
+errors. Readability of code is an essential metric in software
+engineering and can be improved even with simple additions of whitespace
+between lines. \citet{codereadability}
+
+Computer code written by researchers and other individuals who are just
+trying to accomplish a result in any way possible is often of the worse
+quality. This is because they learn using the `just in time' mentality
+and the resources online that promote this mentality disregard code
+quality. \citet{justintimeteaching} Lack of code quality directly
+reduces it's re-usability because other programmers have a harder time
+understanding what the code is doing. If these teaching resources could
+use questions and checks that promote better code quality, many
+technical innovations could be made. Researchers would be more educated
+on how to create reusable code and this would influence developers to
+take their ideas and apply them to real life use cases.
+\citet{reusability}
+
+Code quality post processing software is often used in production
+development environments to ensure good style choices. These checks are
+much less useful at this senior level than they would be at an
+educational level. If programming style can be judged on a submission,
+companies conducting technical interviews will be able to better judge
+applicants and make a more informed decision.
+
+This study will focus on proving that code quality can have an influence
+on code functionality, as well as which kinds of questions influence
+good or bad code styles.
+
+\section{Analysis}\label{analysis}
+
+\subsection{Approach}\label{approach}
+
+A solution to these problems is linking the scoring process in
+programming problems to a metric derived from running code quality
+checks on the submission.
+
+Not only will this analysis benefit educational institutes but also
+companies and competitions that judge people on their code submissions.
+
+\subsection{\texorpdfstring{The `code quality'
+metric}{The code quality metric}}\label{the-code-quality-metric}
+
+\ldots{}
+
+\subsection{Code Equivalence}\label{code-equivalence}
+
+\ldots{}
+
+\section{Visualizations}\label{visualizations}
+
+\ldots{}
+
+\begin{figure}[ht]
+\vskip 0.2in
+\begin{center}
+\centerline{\includegraphics[width=\columnwidth]{../images/languages.png}}
+\caption{Frequency of each programming language that occurs in the dataset of solutions }
+\label{languages}
+\end{center}
+\vskip -0.2in
+\end{figure}
+
+\citet{kernalnlp}
+
+\bibliography{bibliography.bib}
+\bibliographystyle{plainnat}
+
+\end{document} 

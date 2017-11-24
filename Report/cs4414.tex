@@ -1,0 +1,61 @@
+% Document class
+\documentclass{article}
+
+% For figures
+\usepackage{graphicx} % more modern
+\usepackage{subfigure} 
+
+% For citations
+\usepackage{natbib}
+
+% For algorithms
+\usepackage{algorithm}
+
+% algorithmic like to break pdflatex(probably ancient package), use at own risk
+% \usepackage{algorithmic}
+
+% As of 2011, we use the hyperref package to produce hyperlinks in the
+% resulting PDF.  If this breaks your system, please commend out the
+% following usepackage line and replace \usepackage{cs4437cs9637} with
+% \usepackage[nohyperref]{cs4437cs9637}
+\usepackage{hyperref}
+
+% Packages hyperref and algorithmic misbehave sometimes.  We can fix
+% this with the following command.
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+\usepackage{cs4437cs9637} 
+
+\begin{document}
+
+% The \cstitle you define below is probably too long as a header.
+% Therefore, a short form for the running title is supplied here:
+\cstitlerunning{$runhead$}
+
+\twocolumn[
+\cstitle{$title$}
+
+% Author information
+\csauthor{$authorname$ (\normalsize\emph{\# $studentnumber$})}{$email$}
+\csaddress{$institute$}
+
+% You may provide any keywords that you 
+% find helpful for describing your paper; these are used to populate 
+% the "keywords" metadata in the PDF but will not be shown in the document
+\cskeywords{$keywords$}
+
+\vskip 0.3in
+]
+
+$if(abstract)$
+\begin{abstract} 
+{\bf $boldabstract$} $abstract$ \end{abstract} 
+
+$endif$
+
+$body$
+
+\bibliography{$bibliography$}
+\bibliographystyle{$bibstyle$}
+
+\end{document} 

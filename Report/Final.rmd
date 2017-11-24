@@ -1,0 +1,72 @@
+---
+output: 
+  pdf_document:
+    citation_package: natbib
+    toc: true
+    number_sections: false
+    keep_tex: true
+    fig_caption: true
+    latex_engine: pdflatex
+    template: ./cs4414.tex
+title: "Evaluating Solution Quality and Problem Difficulty Utilizing Code Metrics"
+runhead: "Report Draft"
+authorname: Gurpreet Singh
+studentnumber: 250674134
+institute: The University Of Western Ontario
+email: gsingh95@uwo.ca
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+indent: yes
+bibliography: bibliography.bib
+bibstyle: plainnat
+colorlinks: true
+boldabstract: Discovering the effects of code style on code functionality and problem structure.
+abstract: This study aims to showcase how well formatted, reusable and maintainable code is fundamentally better in all circumstances by looking at over 1 million results from a competitive programming website and analyzing the correlation between question and solution. The goal is to promote code quality checking in online 'just in time' teaching resources to improve the performance of interviewers, researchers, and students.
+---
+
+# Background
+
+## Problem
+
+A large amount of educational material related to programming exists on the internet but the majority of which is not well structured or presented. An applied problem that can be observed from educational material found online is that code quality is often left mutually exclusive from code functionality. @justintimeteaching
+
+This leads to some students believing it is acceptable to write code that produces the correct result even if the process behind it is not correct. Online code challenge websites like CodeChef.com do not take into account the style and quality metrics of a code submission when judging competitions. @codechef Cutting corners in the learning process advances into a complete disregard for best practices in open source software and in the workplace which results in a larger amount of errors. Readability of code is an essential metric in software engineering and can be improved even with simple additions of whitespace between lines. @codereadability
+
+Computer code written by researchers and other individuals who are just trying to accomplish a result in any way possible is often of the worse quality. This is because they learn using the 'just in time' mentality and the resources online that promote this mentality disregard code quality. @justintimeteaching Lack of code quality directly reduces it's re-usability because other programmers have a harder time understanding what the code is doing. If these teaching resources could use questions and checks that promote better code quality, many technical innovations could be made. Researchers would be more educated on how to create reusable code and this would influence developers to take their ideas and apply them to real life use cases. @reusability
+
+Code quality post processing software is often used in production development environments to ensure good style choices. These checks are much less useful at this senior level than they would be at an educational level. If programming style can be judged on a submission, companies conducting technical interviews will be able to better judge applicants and make a more informed decision. 
+
+This study will focus on proving that code quality can have an influence on code functionality, as well as which kinds of questions influence good or bad code styles.
+
+# Analysis 
+
+## Approach
+
+A solution to these problems is linking the scoring process in programming problems to a metric derived from running code quality checks on the submission.
+
+Not only will this analysis benefit educational institutes but also companies and competitions that judge people on their code submissions. 
+
+## The 'code quality' metric
+
+...
+
+## Code Equivalence 
+
+...
+
+# Visualizations
+
+...
+
+\begin{figure}[ht]
+\vskip 0.2in
+\begin{center}
+\centerline{\includegraphics[width=\columnwidth]{../images/languages.png}}
+\caption{Frequency of each programming language that occurs in the dataset of solutions }
+\label{languages}
+\end{center}
+\vskip -0.2in
+\end{figure} 
+@kernalnlp
+
+
+# Conclusion
