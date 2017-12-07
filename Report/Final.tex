@@ -59,9 +59,10 @@ resources to improve the performance of interviewers, researchers, and
 students. \end{abstract} 
 
 
-\section{Background}\label{background}
+\section{Description of Applied
+Problem}\label{description-of-applied-problem}
 
-\subsection{Problem}\label{problem}
+\subsection{Problem identification}\label{problem-identification}
 
 A large amount of educational material related to programming exists on
 the internet but the majority of which is not well structured or
@@ -104,9 +105,7 @@ This study will focus on proving that code quality can have an influence
 on code functionality, as well as which kinds of questions influence
 good or bad code styles.
 
-\section{Analysis}\label{analysis}
-
-\subsection{Approach}\label{approach}
+\subsection{Approach Strategy}\label{approach-strategy}
 
 A solution to these problems is linking the scoring process in
 programming problems to a metric derived from running code quality
@@ -115,30 +114,72 @@ checks on the submission.
 Not only will this analysis benefit educational institutes but also
 companies and competitions that judge people on their code submissions.
 
-\subsection{\texorpdfstring{The `code quality'
-metric}{The code quality metric}}\label{the-code-quality-metric}
+\section{Data Description}\label{data-description}
 
-\ldots{}
+\subsection{CodeChef Dataset}\label{codechef-dataset}
+
+CodeChef.com is a competitive programming web application that has
+posted all of their questions and solutions onto the data science
+website, Kaggle. The data consists of a questions comma separated file,
+a solutions comma separated file and 3 files that show the code
+associated with each solution id. The set contains about 1000 problem
+statements and over 1 million code solutions submitted. This should be a
+more than sufficient to make a training and test data set.
+
+\subsection{Code Submission Language
+Density}\label{code-submission-language-density}
+
+The code submissions are written in many different programming languages
+and each language has it's own code analysis tool. Therefore, to make
+the process simpler and come up with higher quality results, the data
+will need to be filtered by the top languages used.
+Figure\textasciitilde{}\ref{languages} shows that C++, Java, C and
+Python are the most popular submissions in this dataset. The majority of
+the dataset is describing submissions in the C family of languages. They
+are also the easiest to group together and process allowing for fair
+comparison of results, therefore, this study will focus only on the C
+family.
+
+\begin{figure}[ht] \vskip 0.2in \begin{center}
+\centerline{\includegraphics[width=\columnwidth]{../images/languages.png}}
+\caption{Frequency of each programming language that occurs in the dataset of
+solutions } \label{languages} \end{center} \vskip -0.2in \end{figure}
+
+\citet{kernalnlp}
+
+\subsection{Feature Selection}\label{feature-selection}
+
+\subsubsection{Question Data}\label{question-data}
+
+The most useful features in the question data files are title, link,
+difficulty level, question statement, and time limit
+
+\subsubsection{Solution Data}\label{solution-data}
+
+The most useful features in the solution data files are status, time
+taken, memory taken, and language
+
+\subsubsection{Code Data}\label{code-data}
+
+The code data files only contain two columns, the first one containing
+the solution ID and the second containing the code string. The solution
+ID will be used to merge the data with the solution data file and that
+data frame will act as the base for the rest of the analysis on code.
+
+In order to make the connection between code functionality and code
+style, a large part of the experiment is obtaining an accurate and
+unbiased metric for code quality. The decision to narrow the dataset to
+only the C family shows it's importance here as we can use a single tool
+to evaluate quality
+
+The tool we will be using is \texttt{cpplint}. It is open source and
+follows
+\href{https://google.github.io/styleguide/cppguide.html}{Google's C
+style guide}
 
 \subsection{Code Equivalence}\label{code-equivalence}
 
-\ldots{}
-
 \section{Visualizations}\label{visualizations}
-
-\ldots{}
-
-\begin{figure}[ht]
-\vskip 0.2in
-\begin{center}
-\centerline{\includegraphics[width=\columnwidth]{../images/languages.png}}
-\caption{Frequency of each programming language that occurs in the dataset of solutions }
-\label{languages}
-\end{center}
-\vskip -0.2in
-\end{figure}
-
-\citet{kernalnlp}
 
 \bibliography{bibliography.bib}
 \bibliographystyle{plainnat}

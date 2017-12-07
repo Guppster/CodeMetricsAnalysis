@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+
+require 'csv'
+
+class CppChecker
+  def initialize(args)
+    # Initialize command line args
+    @csv_file = args[0]
+  end
+
+  def process
+    CSV.open("output.csv", "wb") do |csv_out|
+      CSV.foreach(@csv_file, headers: true) do |row|
+
+        if row['Language'] == 'C++'
+          # Write the Cpp file
+          File.open('temp.cpp', 'w+') { |file| file.write(row['Code']) }
+
+          #Run the check
+          check_output = `./cpplint.py --counting=total temp.cpp`
+
+        else
+          # Write the C file
+          File.open('temp.cc', 'w+') { |file| file.write(row['Code']) }
+
+          #Run the check
+          check_output = `./cpplint.py --counting=total temp.cc`
+
+        end
+
+        output = check_output.lines.last.split.last
+
+        row.push(output)
+        csv_out << row
+      end
+    end
+  end
+
+end
+
+CppChecker.new(ARGV).process
