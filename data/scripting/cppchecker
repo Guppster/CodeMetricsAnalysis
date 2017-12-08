@@ -16,26 +16,29 @@ class CppChecker
           # Write the Cpp file
           File.open('temp.cpp', 'w+') { |file| file.write(row['Code']) }
 
-          #Run the check
+          # Run the check
           check_output = `./cpplint.py --counting=total temp.cpp`
 
         else
           # Write the C file
           File.open('temp.cc', 'w+') { |file| file.write(row['Code']) }
 
-          #Run the check
+          # Run the check
           check_output = `./cpplint.py --counting=total temp.cc`
 
         end
 
+        # Get the last word of the last line (error count)
         output = check_output.lines.last.split.last
 
+        # Push the error count onto row
         row.push(output)
+
+        # Write row to output csv
         csv_out << row
       end
     end
   end
-
 end
 
 CppChecker.new(ARGV).process
