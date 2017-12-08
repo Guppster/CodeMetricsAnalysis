@@ -9,7 +9,7 @@ output:
     latex_engine: pdflatex
     template: ./cs4414.tex
 title: "Evaluating Solution Quality and Problem Difficulty Utilizing Code Metrics"
-runhead: "Report Draft"
+runhead: "Data Science Report"
 authorname: Gurpreet Singh
 studentnumber: 250674134
 institute: The University Of Western Ontario
@@ -95,6 +95,7 @@ Java, C and Python are the most popular submissions in this dataset. The
 majority of the dataset is describing submissions in the C family of languages.
 They are also the easiest to group together and process allowing for fair 
 comparison of results, therefore, this study will focus only on the C family.
+This reduces the dataset to just under 600000 rows of valid data.
 
 \begin{figure}[ht] \vskip 0.2in \begin{center}
 \centerline{\includegraphics[width=\columnwidth]{../images/languages.png}}
@@ -106,13 +107,21 @@ solutions } \label{languages} \end{center} \vskip -0.2in \end{figure}
 
 ### Question Data
 
-The most useful features in the question data files are title, link, difficulty
-level, question statement, and time limit
+The most useful features in the question data files are question ID, title,
+difficulty level, question statement, and time limit. This data will need to 
+be cleaned by removing some common text that exists in every question. For 
+example: "All submissions for this problem are available". Then, this data
+can be inner joined to the solutions dataset with the key 'Question ID' to determine
+insights about how the questions effect code style.
 
 ### Solution Data 
 
-The most useful features in the solution data files are status, time taken,
-memory taken, and language
+The most useful features in the solution data files are solution ID, status,
+time taken, memory taken, and language. First this data will be filtered to
+contain only the C family of languages. The C family is any language that
+starts with a C followed by a space. Then solution ID will be used to outer
+merge data to the relevant code data provided in separate files so we have more
+information about each individual solution.
 
 ### Code Data
 
@@ -127,10 +136,63 @@ code quality. The decision to narrow the dataset to only the C family shows
 it's importance here as we can use a single tool to evaluate quality
 
 The tool we will be using is `cpplint`. It is open source and follows [Google's
-C style guide](https://google.github.io/styleguide/cppguide.html)
+C style guide](https://google.github.io/styleguide/cppguide.html). We wrote
+a ruby script to run this tool on each row of the merged solutions + code
+dataset and add another feature to each instance. The feature is an integer
+representing the number of code style errors the code had
 
-## Code Equivalence 
+# Analysis
 
-# Visualizations
+## Experimental Methods
 
-# Conclusion
+The main relationship we are interested in is the effect of Quality on the
+success rate. To begin to solve that problem we first look at the success rate
+grouped by UserID. Figure \ref{uservsuccess} shows that large chunks of users
+are placed at very low success and very high success. This is what we would
+expect to see if code quality was influencing results because users who write
+better code would be correct more often. Other factors may be causing this
+behaviour so we continue analyzing the data.
+
+\begin{figure}[ht] \vskip 0.2in \begin{center}
+\centerline{\includegraphics[width=\columnwidth]{../images/UserVsSuccess.png}}
+\caption{ Histogram showing the distribution of users and their success rates } \label{uservsuccess} \end{center} \vskip -0.2in \end{figure}
+
+Next, we will see if you can predict the amount of style errors based on
+weather a solution will be "accepted" or end in one of the many error codes.
+This will be done by creating a model using linear regression so we can do
+predict the Quality value based on the status feature. Before creating the
+model the data was split into 2 parts for training and testing. The training
+data frame was 75% of the data and the testing data frame was the remaining
+25%. Figure \ref{linearRegression} shows a visual representation of the binary
+classification. It is clear that the unaccepted answers had more code style
+errors in their submissions.
+
+\begin{figure}[ht] \vskip 0.2in \begin{center}
+\centerline{\includegraphics[width=\columnwidth]{../images/linearregression.png}}
+\caption{ Predicting Quality based on Success } \label{linearRegression} \end{center} \vskip -0.2in \end{figure}
+
+After developing the model, the test set was used to determine the models
+error. Root means squared error was used for error calculation so there is
+extra weight given to large errors. The error value we received for this model
+was 76. The dependent variable was 'Number of Errors' therefore this error is
+low because RMSE has the same units as the dependent variable. The RMSE of the
+training data frame is 78 which leads us to believe the model is not
+over-fitting. This shows that given a correct or incorrect solution our model
+can guess how bad the code style will be.
+
+Next, we will use logistic regression to predict the chance that a solution
+will be correct based on the Quality feature. After using `glm` with Quality
+and Success features, the summary of the model showed that Quality
+statistically significant with a low p-value. The same 75% training data 25%
+testing data split was used in this model as well. Using the testing set to
+predict and calculate error using MSE with a 0.5 decision boundary, the error
+returned was 0. The model was unsuccessful. 
+
+# Discussion & Conclusion
+
+In conclusion, the analysis attempted in this study provide some evidence that
+modern code quizzing websites and other "just in time" teaching resources can
+enhance their material by adding code quality checks into their evaluation.
+Figures \ref{uservsuccess} & 4 show how the users of code evaluation websites
+have very dispersed skill levels and code quality could be the key to bridging
+the gap.
